@@ -5,7 +5,7 @@ export const SITE = {
   desc: "Research notes on cyber intrusions, adversary tradecraft, and other cybersecurity topics.",
   title: "Deobfuscated",
   ogImage: "astro-deobfuscated-1.png",
-  lightAndDarkMode: true,
+  lightAndDarkMode: false,
   postPerIndex: 4,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

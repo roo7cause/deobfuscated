@@ -7,7 +7,6 @@ import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
@@ -23,31 +22,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Deobfuscated
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        Research notes on cyber intrusions, adversary tradecraft, and other cybersecurity topics.
-      </p>
-      <p class="mt-2">
+      <p class="mt-2 italic text-[#6b9bd1] opacity-90 max-w-2xl mx-auto" style="text-align: justify; text-justify: inter-word;">
         A personal research journal documenting ideas, observations, and lessons learned from threat intelligence work.
       </p>
-      {
+      {/* {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
@@ -55,7 +33,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             <Socials />
           </div>
         )
-      }
+      } */}
     </section>
 
     {
