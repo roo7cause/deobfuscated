@@ -6,19 +6,19 @@
     @apply prose;
 
     h1 {
-      @apply mb-3 text-accent;
+      @apply mb-3 text-accent font-bold;
     }
 
     h2 {
-      @apply mb-3 text-accent;
+      @apply mb-3 text-accent font-semibold;
     }
 
     h3 {
-      @apply mb-3 italic text-accent;
+      @apply mb-3 text-accent font-medium;
     }
 
     h4 {
-      @apply mb-3 text-accent;
+      @apply mb-3 text-accent font-medium;
     }
 
     th {
@@ -36,7 +36,7 @@
     }
 
     a {
-      @apply wrap-break-word text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
+      @apply wrap-break-word text-accent no-underline underline-offset-4 hover:text-foreground focus-visible:no-underline;
     }
 
     ul {
@@ -44,7 +44,7 @@
     }
 
     li {
-      @apply marker:text-accent;
+      @apply marker:text-foreground;
     }
 
     hr {
