@@ -4,7 +4,6 @@ description: "A first-hand look at a modern malvertising campaign: detection, an
 author: David Kasabji
 pubDatetime: 2026-01-27T09:00:00Z
 category: "Intrusion Log"
-tags: ["intrusion-analysis", "adversary-tradecraft", "detection-engineering", "osint"]
 ---
 
 ## TL;DR
@@ -83,17 +82,17 @@ Without these layers, further payloads could have executed or contacted command-
 
 From this investigation, several concrete lessons emerged:
 
-### 📌 Certificate-Anomaly Detection
+### Certificate-Anomaly Detection
 Track and alert on:
 - **Short-lived certificates** (e.g., <7 days)
 - **First-seen signing entities**
 - Certificates used on unusual installers
 
-### 📌 Network Behavior Indicators
+### Network Behavior Indicators
 - Watch for **rapid redirects** from search to newly registered domains  
 - Flag download patterns originating from TLDs common in abuse reports
 
-### 📌 ASR & Behavioral Telemetry
+### ASR & Behavioral Telemetry
 These capabilities, when tuned, can catch what signature-only tools miss — particularly for signed malware using legitimate trust signals.
 
 ---

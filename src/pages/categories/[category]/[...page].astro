@@ -34,8 +34,7 @@ const { page, categoryName } = Astro.props;
 <Layout title={`${categoryName} | ${SITE.title}`}>
   <Header />
   <Main
-    pageTitle={[`${categoryName}`]}
-    titleTransition={category}
+    pageTitle={categoryName}
     pageDesc={`All articles in the ${categoryName} category.`}
   >
     <h1 slot="title" transition:name={category}>{categoryName}</h1>

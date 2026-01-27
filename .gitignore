@@ -26,3 +26,7 @@ pnpm-debug.log*
 # pagefind
 
 public/pagefind
+
+# Content writing templates and guides (local only)
+src/data/blog/_template.md
+docs/CONTENT_GUIDE.md
