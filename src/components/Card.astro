@@ -23,7 +23,10 @@ const { title, description, ...props } = data;
     ]}
   >
     <Heading
-      style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
+      style={{ 
+        viewTransitionName: slugifyStr(title.replaceAll(".", "-")),
+        fontFamily: "var(--font-heading)"
+      }}
     >
       {title}
     </Heading>

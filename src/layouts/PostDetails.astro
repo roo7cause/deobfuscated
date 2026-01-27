@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
+import Category from "@/components/Category.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
@@ -31,6 +32,7 @@ const {
   pubDatetime,
   modDatetime,
   timezone,
+  category,
   tags,
   hideEditPost,
 } = post.data;
@@ -93,6 +95,7 @@ const nextPost =
     <h1
       transition:name={slugifyStr(title.replaceAll(".", "-"))}
       class="inline-block text-2xl font-bold text-accent sm:text-3xl"
+      style="font-family: var(--font-heading);"
     >
       {title}
     </h1>
@@ -118,9 +121,21 @@ const nextPost =
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
-    </ul>
+    <div class="mt-4 mb-8 sm:my-8">
+      <div class="mb-2 text-sm opacity-75">Category:</div>
+      <ul class="flex flex-wrap gap-4">
+        <Category category={slugifyStr(category)} categoryName={category} size="sm" />
+      </ul>
+    </div>
+
+    {tags.length > 0 && (
+      <div class="mb-8">
+        <div class="mb-2 text-sm opacity-75">Tags:</div>
+        <ul class="flex flex-wrap gap-4">
+          {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
+        </ul>
+      </div>
+    )}
 
     <BackToTopButton />
 

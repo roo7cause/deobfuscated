@@ -3,6 +3,7 @@ title: "Malvertising Uncovered: From SEO Poisoning to Signed Malware Deployment"
 description: "A first-hand look at a modern malvertising campaign: detection, analysis, and what defenders can learn."
 author: David Kasabji
 pubDatetime: 2026-01-27T09:00:00Z
+category: "Intrusion Log"
 tags: ["intrusion-analysis", "adversary-tradecraft", "detection-engineering", "osint"]
 ---
 

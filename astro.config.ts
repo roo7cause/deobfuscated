@@ -15,9 +15,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: SITE.website,
   integrations: [
-    sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
-    }),
+    sitemap(),
   ],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
@@ -61,11 +59,27 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
+        name: "IBM Plex Sans",
+        cssVariable: "--font-ibm-plex-sans",
+        provider: fontProviders.google(),
+        fallbacks: ["sans-serif"],
+        weights: [300, 400, 500, 600, 700],
+        styles: ["normal", "italic"],
+      },
+      {
+        name: "IBM Plex Mono",
+        cssVariable: "--font-ibm-plex-mono",
+        provider: fontProviders.google(),
+        fallbacks: ["monospace"],
+        weights: [400, 500, 600, 700],
+        styles: ["normal", "italic"],
+      },
+      {
         name: "Space Mono",
         cssVariable: "--font-space-mono",
         provider: fontProviders.google(),
         fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
+        weights: [400, 700],
         styles: ["normal", "italic"],
       },
     ],

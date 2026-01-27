@@ -61,10 +61,18 @@ const structuredData = {
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Load Font -->
+    <!-- Load Fonts -->
+    <Font
+      cssVariable="--font-ibm-plex-sans"
+      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+    />
+    <Font
+      cssVariable="--font-ibm-plex-mono"
+      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+    />
     <Font
       cssVariable="--font-space-mono"
-      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+      preload={[{ subset: "latin", weight: 700, style: "normal" }]}
     />
 
     <!-- General Meta Tags -->
@@ -121,7 +129,7 @@ const structuredData = {
       href={new URL("rss.xml", Astro.site)}
     />
 
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0f1215" />
 
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,

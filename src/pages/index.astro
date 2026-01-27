@@ -23,7 +23,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
       <p class="mt-2 italic text-[#6b9bd1] opacity-90 max-w-2xl mx-auto" style="text-align: justify; text-justify: inter-word;">
-        A personal research journal documenting ideas, observations, and lessons learned from threat intelligence work.
+        I keep this journal as a reminder that every intrusion is an opportunity: to understand adversaries better, to sharpen our defenses, and to turn hard-earned lessons into shared knowledge.
       </p>
       {/* {
         // only display if at least one social link is enabled
@@ -45,7 +45,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             { "border-b border-border": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+          <h2 class="text-2xl font-semibold tracking-wide" style="font-family: var(--font-heading);">Featured</h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
@@ -58,7 +58,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <h2 class="text-2xl font-semibold tracking-wide" style="font-family: var(--font-heading);">Recent Posts</h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
