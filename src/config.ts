@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://deobfuscated.dev/",
   desc: "Research notes on cyber intrusions, adversary tradecraft, and other cybersecurity topics.",
   title: "Deobfuscated",
-  ogImage: "astro-deobfuscated-1.png",
+  ogImage: "deobfuscated_thumbnail_v2_square_1080",
   lightAndDarkMode: false,
   postPerIndex: 4,
   postPerPage: 4,
