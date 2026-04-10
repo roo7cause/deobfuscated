@@ -31,10 +31,10 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/davidkasabji/",
+    href: "https://www.linkedin.com/in/david-kasabji/",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
-  },  
+  },
 ] as const;
 
 export const SHARE_LINKS: Social[] = [
