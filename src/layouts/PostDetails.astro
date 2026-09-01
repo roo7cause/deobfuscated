@@ -5,7 +5,6 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Category from "@/components/Category.astro";
 import Datetime from "@/components/Datetime.astro";
-import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
@@ -32,7 +31,6 @@ const {
   modDatetime,
   timezone,
   category,
-  hideEditPost,
 } = post.data;
 
 const { Content } = await render(post);
@@ -99,14 +97,6 @@ const nextPost =
     </h1>
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
-      <span
-        aria-hidden="true"
-        class:list={[
-          "max-sm:hidden",
-          { hidden: !SITE.editPost.enabled || hideEditPost },
-        ]}>|</span
-      >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
     <article
       id="article"
@@ -117,12 +107,14 @@ const nextPost =
 
     <hr class="my-8 border-dashed" />
 
-    <EditPost class="sm:hidden" {hideEditPost} {post} />
-
     <div class="mt-4 mb-8 sm:my-8">
       <div class="mb-2 text-sm opacity-75">Category:</div>
       <ul class="flex flex-wrap gap-4">
-        <Category category={slugifyStr(category)} categoryName={category} size="sm" />
+        <Category
+          category={slugifyStr(category)}
+          categoryName={category}
+          size="sm"
+        />
       </ul>
     </div>
 
