@@ -11,7 +11,7 @@ export const SITE = {
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showBackButton: true, // show back button in post detail
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit page",
     url: "https://github.com/roo7cause/deobfuscated/edit/main/",
   },
